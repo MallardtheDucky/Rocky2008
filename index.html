@@ -10,7 +10,7 @@
             font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
             font-size: 14px;
             color: #333;
-            background: #e0e0e0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG𝗼yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE5MzBFNTYyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE5MzBFNTcyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiPiA/eHBhY2tldCBlbmQ9InIiPz4+2Q0AAAAsSURBVHjaYvj//z8DEARjYGBgYGFgYPhjYGD49wADjGFlYPhPAQIMAPUUD3SSlI2EAAAAAElFTSuQmCC) repeat;
+            background: #e0e0e0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE5MzBFNTYyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE5MzBFNTcyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiPiA/eHBhY2tldCBlbmQ9InIiPz4+2Q0AAAAsSURBVHjaYvj//z8DEARjYGBgYGFgYPhjYGD49wADjGFlYPhPAQIMAPUUD3SSlI2EAAAAAElFTSuQmCC) repeat;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -50,14 +50,23 @@
             opacity: 0.2;
         }
         
-        #header img {
+        .header-monogram {
             height: 90px;
             width: 90px;
+            flex-shrink: 0;
             border-radius: 50%;
             border: 4px solid #fff;
-            background-color: #ccc;
+            background: linear-gradient(to bottom, #d92548 0%, #a60929 100%);
             z-index: 1;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.5), inset 0 2px 3px rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
         }
 
         #header div { z-index: 1; }
@@ -140,6 +149,45 @@
         .guarantee-box h3 { font-size: 28px; color: #002868; margin: 0 0 10px 0; border-bottom: none; }
         .guarantee-box p { font-size: 18px; margin: 0; font-style: italic; color: #444; }
         
+        /* About Page Enhancements */
+        .about-container {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        .about-image-column {
+            flex: 0 0 250px; /* Fixed width for the image column */
+            text-align: center;
+        }
+        .about-image-column img {
+            width: 100%;
+            border: 6px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .about-text-column {
+            flex: 1;
+        }
+        .about-text-column h3 {
+            margin-top: 0;
+        }
+        .about-quote {
+            background-color: #e9eff7;
+            border: 1px solid #c5d2e3;
+            border-left: 5px solid #002868;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .about-quote p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
         /* Issues Page styling */
         .accordion-title {
             background: linear-gradient(to bottom, #0040a3 0%, #002868 100%);
@@ -197,7 +245,7 @@
 </head>
 <body>
 
-    <div id="container">
+     <div id="container">
         <div id="header">
             <img src="images/ChatGPT Image Sep 26, 2025, 01_50_52 PM.png" alt=" Monogram">
             <div>
@@ -242,16 +290,25 @@
                 <!-- ABOUT PAGE -->
                 <div id="about" class="page">
                     <h2>About John D. Rockefeller V</h2>
-                    <img src="images/John_Edwards,_official_Senate_photo_portrait (1).jpg" alt="Official Portrait of John D. Rockefeller V" style="float:left; margin-right: 25px; margin-bottom: 15px; border: 5px solid #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.3); border-radius: 5px;">
-                    <h3>A Lifetime of Public Service</h3>
-                    <p>John D. "Rocky" Rockefeller V has dedicated his life to the belief that government can be a powerful force for good. Born into a family with a long legacy of philanthropy, John learned early that with great privilege comes an even greater responsibility to serve the public good.</p>
-                    <p>Rejecting a career on Wall Street, he chose a path of public service after law school, starting as a community organizer in the struggling industrial towns of the Rust Belt. He saw firsthand the devastating impact of outsourcing and neglect on working families. This experience solidified his unwavering commitment to economic justice and the idea that a strong nation must have a strong middle class.</p>
-                    
-                    <h3>A Governor for the People</h3>
-                    <p>As Governor, John balanced the state budget every year while expanding vital services. He wasn't afraid to take on powerful special interests. He invested in education, creating a free community college program that became a model for the nation. He fought to protect union jobs by vetoing anti-worker legislation and personally negotiating to keep factories open. He also championed landmark environmental legislation, preserving millions of acres of wilderness.</p>
-                    
-                    <h3>A Leader for Our Times</h3>
-                    <p>John is a leader who listens more than he talks and prefers bold ideas to empty talking points. He and his wife, Sarah, a public school teacher, have been married for 25 years and have three children. They understand the hopes and challenges of American families because they are one. Now, John is ready to bring his proven record of results and his unwavering commitment to progress to the White House.</p>
+                    <div class="about-container">
+                        <div class="about-image-column">
+                            <img src="images/John-Edwards.webp" alt="Official Portrait of John D. Rockefeller V">
+                            <div class="about-quote">
+                                <p>"With great privilege comes an even greater responsibility to serve the public good."</p>
+                            </div>
+                        </div>
+                        <div class="about-text-column">
+                            <h3>A Lifetime of Public Service</h3>
+                            <p>John D. "Rocky" Rockefeller V has dedicated his life to the belief that government can be a powerful force for good. Born into a family with a long legacy of philanthropy, John learned early that with great privilege comes an even greater responsibility to serve the public good.</p>
+                            <p>Rejecting a career on Wall Street, he chose a path of public service after law school, starting as a community organizer in the struggling industrial towns of the Rust Belt. He saw firsthand the devastating impact of outsourcing and neglect on working families. This experience solidified his unwavering commitment to economic justice and the idea that a strong nation must have a strong middle class.</p>
+                            
+                            <h3>A Governor for the People</h3>
+                            <p>As Governor, John balanced the state budget every year while expanding vital services. He wasn't afraid to take on powerful special interests. He invested in education, creating a free community college program that became a model for the nation. He fought to protect union jobs by vetoing anti-worker legislation and personally negotiating to keep factories open. He also championed landmark environmental legislation, preserving millions of acres of wilderness.</p>
+                            
+                            <h3>A Leader for Our Times</h3>
+                            <p>John is a leader who listens more than he talks and prefers bold ideas to empty talking points. He and his wife, Sarah, a public school teacher, have been married for 25 years and have three children. They understand the hopes and challenges of American families because they are one. Now, John is ready to bring his proven record of results and his unwavering commitment to progress to the White House.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ISSUES PAGE -->
@@ -501,6 +558,8 @@
 
             donationButtons.forEach(button => {
                 button.addEventListener('click', function() {
+                    const amount = this.dataset.amount;
+                    customAmountInput.value = `$${amount}`;
                     donationButtons.forEach(btn => {
                         btn.style.background = defaultStyle;
                         btn.style.color = '#333';
@@ -511,11 +570,10 @@
                     this.style.color = '#fff';
                     this.style.borderColor = '#001f4f';
                     this.style.textShadow = '1px 1px 1px #000';
-                    customAmountInput.value = ''; 
                 });
             });
             
-            customAmountInput.addEventListener('focus', function() {
+            customAmountInput.addEventListener('input', function() {
                  donationButtons.forEach(btn => {
                     btn.style.background = defaultStyle;
                     btn.style.color = '#333';
