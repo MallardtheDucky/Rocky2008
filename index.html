@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=960, initial-scale=1.0">
+    <title>John D. Rockefeller V for President | 2008</title>
+    <style>
+        /* CSS for a highly polished, detailed 2008 web aesthetic */
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #333;
+            background: #e0e0e0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG𝗼yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE5MzBFNTYyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE5MzBFNTcyNjQzMTFFOUIwNTBGNkU3ODdFODhDODYiPiA/eHBhY2tldCBlbmQ9InIiPz4+2Q0AAAAsSURBVHjaYvj//z8DEARjYGBgYGFgYPhjYGD49wADjGFlYPhPAQIMAPUUD3SSlI2EAAAAAElFTSuQmCC) repeat;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #container {
+            width: 960px;
+            margin: 25px auto;
+            background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%);
+            border: 1px solid #888;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #header {
+            background: #002868; /* Dark blue */
+            padding: 20px 25px;
+            color: #fff;
+            background: linear-gradient(to bottom, #0045b3 0%, #00225a 100%);
+            border-bottom: 7px solid #BF0A30; /* Red accent */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        #header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><g fill-opacity=".1"><path d="M0 50 L50 0 L100 50 L50 100 Z"/></g></svg>');
+            opacity: 0.2;
+        }
+        
+        #header img {
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            background-color: #ccc;
+            z-index: 1;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        #header div { z-index: 1; }
+        
+        #header h1 {
+            margin: 0;
+            font-size: 52px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: normal;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        #header .slogan {
+            font-size: 21px;
+            margin-top: 5px;
+            color: #d0d8e8;
+            font-style: italic;
+        }
+
+        #nav {
+            background: linear-gradient(to bottom, #555 0%, #333 100%);
+            padding: 0;
+            margin: 0;
+            height: 48px;
+            border-bottom: 2px solid #000;
+        }
+
+        #nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+        #nav li { margin: 0; padding: 0; flex-grow: 1; text-align: center; }
+        #nav li a {
+            display: block; padding: 13px 20px; color: #fff; text-decoration: none;
+            font-weight: bold; text-transform: uppercase; font-size: 14px;
+            transition: all 0.2s; border-right: 1px solid #666; text-shadow: 1px 1px 1px #000;
+        }
+        
+        #nav li:last-child a { border-right: none; }
+        #nav li a:hover, #nav li a.active {
+            background: linear-gradient(to bottom, #d92548 0%, #BF0A30 100%);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        #main-content { padding: 30px; min-height: 500px; display: flex; gap: 30px; }
+        #content-column { width: 65%; }
+        #sidebar-column { width: 35%; }
+        
+        .page { display: none; }
+        .page.active { display: block; }
+        
+        h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 34px; color: #002868; border-bottom: 4px solid #BF0A30;
+            padding-bottom: 10px; margin-top: 0; margin-bottom: 25px;
+        }
+        
+        h3 {
+             font-family: Georgia, 'Times New Roman', Times, serif; font-size: 26px;
+            color: #BF0A30; margin-top: 30px; border-bottom: 1px solid #ddd; padding-bottom: 8px;
+        }
+        
+        .sidebar-widget {
+            border: 1px solid #c5d2e3; border-radius: 8px; margin-bottom: 25px;
+            background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .sidebar-widget .widget-header {
+            background: linear-gradient(to bottom, #eef3f9 0%, #d8e2ee 100%);
+            padding: 10px 15px; border-bottom: 1px solid #c5d2e3;
+            border-top-left-radius: 8px; border-top-right-radius: 8px;
+        }
+        .sidebar-widget .widget-header h3 {
+            margin: 0; padding: 0; font-size: 20px; color: #002868; border: none;
+        }
+        .sidebar-widget .widget-content { padding: 15px; }
+
+        /* Home Page specific */
+        .guarantee-box {
+            background-color: #fdfae7; border: 2px solid #e9e0b4; padding: 25px;
+            margin: 25px 0; text-align: center; border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+        }
+        .guarantee-box h3 { font-size: 28px; color: #002868; margin: 0 0 10px 0; border-bottom: none; }
+        .guarantee-box p { font-size: 18px; margin: 0; font-style: italic; color: #444; }
+        
+        /* Issues Page styling */
+        .accordion-title {
+            background: linear-gradient(to bottom, #0040a3 0%, #002868 100%);
+            color: white; padding: 14px 20px; font-weight: bold; font-size: 16px;
+            cursor: pointer; border: 1px solid #001f4f; margin-top: 10px;
+            border-radius: 4px; transition: background-color 0.2s;
+        }
+        .accordion-title:hover { background: linear-gradient(to bottom, #0049b8 0%, #00307d 100%); }
+        .accordion-title::after { content: ' [+]'; float: right; font-size: 18px; }
+        .accordion-title.active::after { content: ' [-]'; }
+        
+        .accordion-content {
+            padding: 10px 20px; background-color: #f9f9ff;
+            border: 1px solid #d9d9f0; border-top: none; max-height: 0;
+            overflow: hidden; transition: max-height 0.4s ease-out;
+        }
+        .accordion-content ul {
+            list-style-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10"><polygon fill="%23BF0A30" points="4,0 4,10 9,5"/></svg>');
+            margin-left: 20px; padding: 15px 0;
+        }
+        .accordion-content li { margin-bottom: 10px; line-height: 1.6; }
+        .accordion-content .summary { font-style: italic; color: #002868; padding: 15px; background: #e9eff7; border-radius: 4px; margin-top: 10px;}
+        
+        /* Blog Page */
+        .blog-post { margin-bottom: 30px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+        .blog-post:last-child { border-bottom: none; }
+        .blog-post h3 { margin-top:0; padding-bottom: 5px; border: none;}
+        .blog-post .post-meta { font-size: 12px; color: #666; margin-bottom: 15px; }
+
+        /* Forms */
+        .form-container { background: #fdfdfd; padding: 25px; border: 1px solid #ccc; border-radius: 8px; }
+        .form-row { margin-bottom: 15px; }
+        .form-row label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-row input[type="text"], .form-row input[type="email"], .form-row select {
+            width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;
+        }
+        .form-button {
+            background: linear-gradient(to bottom, #e02d4f 0%, #BF0A30 100%);
+            color: white; border: 1px solid #8c001a; padding: 14px 30px; font-size: 18px;
+            font-weight: bold; text-transform: uppercase; border-radius: 8px; cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+        .form-button:hover { 
+            background: linear-gradient(to bottom, #a60929 0%, #8c001a 100%);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        #footer {
+            background-color: #222; color: #bbb; padding: 25px; font-size: 12px;
+            text-align: center; border-top: 5px solid #000;
+        }
+        #footer p { margin: 0; }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="header">
+            <img src="https://placehold.co/90x90/ffffff/002868?text=JDR" alt="JDR Monogram">
+            <div>
+                <h1>John D. Rockefeller V</h1>
+                <p class="slogan">Bold Action, Shared Prosperity, American Renewal.</p>
+            </div>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About John</a></li>
+                <li><a href="#issues" class="nav-link">Issues</a></li>
+                <li><a href="#blog" class="nav-link">Campaign Blog</a></li>
+                <li><a href="#endorsements" class="nav-link">Endorsements</a></li>
+                <li><a href="#get-involved" class="nav-link">Get Involved</a></li>
+                <li><a href="#donate" class="nav-link">Donate</a></li>
+            </ul>
+        </div>
+        <div id="main-content">
+            <div id="content-column">
+
+                <!-- HOME PAGE -->
+                <div id="home" class="page active">
+                    <h2>A New Deal for the New Millennium</h2>
+                    <p>Our nation stands at a crossroads. We face profound economic challenges that test our resolve, but they do not define our future. The spirit of American innovation, hard work, and community has overcome every obstacle in our path, and it will again.</p>
+                    <p>This is not just a campaign; this is America's comeback. Together, we will forge a new era of shared prosperity and renew the American dream for generations to come. I invite you to explore my plans and join our movement.</p>
+                    
+                    <div class="guarantee-box">
+                        <h3>The Rockefeller Guarantee</h3>
+                        <p>"If you work hard, America will work for you."</p>
+                    </div>
+
+                    <h3>Our Plan for American Renewal</h3>
+                    <p>We will take bold, immediate action to restore our economy and empower working families. Our plan focuses on three core pillars:</p>
+                    <ul>
+                        <li><strong>Rebuilding the Economy:</strong> Launching a National Works Program to create 500,000 jobs, revitalizing our manufacturing sector with the 'Steel Belt Deal', and ensuring "Buy American" is the law of the land for our government.</li>
+                        <li><strong>Healthcare & Education for All:</strong> Passing the American Health Security Act to create a universal, single-payer healthcare system, while making community college free and funding universal Pre-K.</li>
+                        <li><strong>Securing Our Future:</strong> Achieving energy independence by 2012 through the America First Energy Act and restoring our nation's leadership in science and technology by doubling NASA's budget.</li>
+                    </ul>
+                </div>
+
+                <!-- ABOUT PAGE -->
+                <div id="about" class="page">
+                    <h2>About John D. Rockefeller V</h2>
+                    <img src="https://placehold.co/300x400/666666/ffffff?text=John+D.+Rockefeller+V" alt="Official Portrait of John D. Rockefeller V" style="float:left; margin-right: 25px; margin-bottom: 15px; border: 5px solid #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.3); border-radius: 5px;">
+                    <h3>A Lifetime of Public Service</h3>
+                    <p>John D. "Rocky" Rockefeller V has dedicated his life to the belief that government can be a powerful force for good. Born into a family with a long legacy of philanthropy, John learned early that with great privilege comes an even greater responsibility to serve the public good.</p>
+                    <p>Rejecting a career on Wall Street, he chose a path of public service after law school, starting as a community organizer in the struggling industrial towns of the Rust Belt. He saw firsthand the devastating impact of outsourcing and neglect on working families. This experience solidified his unwavering commitment to economic justice and the idea that a strong nation must have a strong middle class.</p>
+                    
+                    <h3>A Governor for the People</h3>
+                    <p>As Governor, John balanced the state budget every year while expanding vital services. He wasn't afraid to take on powerful special interests. He invested in education, creating a free community college program that became a model for the nation. He fought to protect union jobs by vetoing anti-worker legislation and personally negotiating to keep factories open. He also championed landmark environmental legislation, preserving millions of acres of wilderness.</p>
+                    
+                    <h3>A Leader for Our Times</h3>
+                    <p>John is a leader who listens more than he talks and prefers bold ideas to empty talking points. He and his wife, Sarah, a public school teacher, have been married for 25 years and have three children. They understand the hopes and challenges of American families because they are one. Now, John is ready to bring his proven record of results and his unwavering commitment to progress to the White House.</p>
+                </div>
+
+                <!-- ISSUES PAGE -->
+                <div id="issues" class="page">
+                    <h2>The American Renewal Policy Platform</h2>
+                    <p>We will invest in people and infrastructure while maintaining fiscal responsibility through progressive taxation and smart spending. Here's our blueprint.</p>
+
+                    <div class="accordion-title">Economic Recovery & Financial Crisis</div>
+                    <div class="accordion-content">
+                        <p class="summary">"We will provide immediate relief to families, hold Wall Street accountable, and invest in Main Street to rebuild our economy from the ground up."</p>
+                        <ul>
+                            <li><strong>Direct Payments:</strong> $300B for immediate relief, with $1,500 per person and $3,000 per family.</li>
+                            <li><strong>Aid to States:</strong> $100B to prevent layoffs of teachers, firefighters, and police officers.</li>
+                            <li><strong>Mortgage Relief:</strong> Federal buyout and refinancing of distressed mortgages at a fixed 3% rate.</li>
+                            <li><strong>Conditional Bailout:</strong> A $500B fund where the government takes equity stakes in bailed-out companies, caps executive pay, and mandates employee representation on boards.</li>
+                        </ul>
+                    </div>
+
+                    <div class="accordion-title">Jobs & The American Worker</div>
+                    <div class="accordion-content">
+                        <p class="summary">"The American worker is the best in the world. We will end unfair trade, invest in manufacturing, and guarantee that every American who wants to work, can work."</p>
+                         <ul>
+                            <li><strong>National Works Program:</strong> A "Domestic Civilian Corp" of 500,000 federal jobs in infrastructure.</li>
+                            <li><strong>Manufacturing Renaissance:</strong> The "Steel Belt Deal" will modernize factories and triple SBA funding for manufacturing loans.</li>
+                            <li><strong>"Buy American":</strong> Mandate an 80% domestic content requirement for all federal contracts.</li>
+                            <li><strong>Worker First Act:</strong> Raise minimum wage to $8.50/hr, guarantee 4 weeks paid vacation, and create 500,000 paid apprenticeships.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accordion-title">Healthcare</div>
+                    <div class="accordion-content">
+                        <p class="summary">"Healthcare is a right, not a privilege. We will pass the American Health Security Act to finally guarantee universal healthcare for every citizen."</p>
+                        <ul>
+                            <li><strong>Universal, Single-Payer System:</strong> Phased in over 4 years.</li>
+                            <li><strong>Immediate Medicaid Expansion:</strong> Cover all unemployed individuals and their families.</li>
+                            <li><strong>Negotiate Drug Prices:</strong> Empower the federal government to lower prescription drug costs.</li>
+                            <li><strong>Comprehensive Benefits:</strong> Coverage will include mental health, dental, and vision care.</li>
+                        </ul>
+                    </div>
+
+                    <div class="accordion-title">Farms & Rural America</div>
+                    <div class="accordion-content">
+                        <p class="summary">"We will ensure that our family farmers are not just surviving, but thriving, with guaranteed profits and investment in rural communities."</p>
+                        <ul>
+                           <li><strong>Guaranteed Profits:</strong> Increase farm price floors by 40% with federal purchase guarantees.</li>
+                           <li><strong>Rural Investment:</strong> Deliver broadband to every farming community within 2 years.</li>
+                           <li><strong>Young Farmers:</strong> Provide $25,000 grants for new farmers under 35.</li>
+                           <li><strong>"Grow America" Program:</strong> Mandate federal contracts for schools and military to use American-grown food.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accordion-title">Energy, Space & The Future</div>
+                    <div class="accordion-content">
+                         <p class="summary">"To win the 21st century, America must lead. We will achieve energy independence and once again reach for the stars."</p>
+                        <ul>
+                            <li><strong>American Energy Corporation:</strong> Increase budget to $100B to focus on nuclear power, domestic oil/gas, and solar manufacturing.</li>
+                            <li><strong>Energy Independence by 2012:</strong> Double the Strategic Petroleum Reserve.</li>
+                            <li><strong>Double NASA Budget to $30B:</strong> A bold investment to restore American leadership.</li>
+                            <li><strong>Ambitious Goals:</strong> Establish a moon base by 2012 and a crewed Mars colony by 2020.</li>
+                         </ul>
+                    </div>
+                </div>
+                
+                <!-- CAMPAIGN BLOG PAGE -->
+                <div id="blog" class="page">
+                    <h2>Campaign Blog</h2>
+                    
+                    <div class="blog-post">
+                        <h3>A Promise to the Steel Belt</h3>
+                        <p class="post-meta">Posted on October 28, 2008 by the Campaign</p>
+                        <p>Today in Pittsburgh, John D. Rockefeller V stood with steelworkers and laid out his vision for an American manufacturing renaissance. The 'Steel Belt Deal' is not just a plan; it's a promise. A promise to create 200,000 new jobs by modernizing abandoned factories. A promise to invest in our workers with half a million new apprenticeships. A promise that "Buy American" will be more than a slogan—it will be the law for our government. This is how we rebuild the middle class and ensure the 21st century is another American century.</p>
+                    </div>
+
+                    <div class="blog-post">
+                        <h3>What The Rockefeller Guarantee Means for You</h3>
+                        <p class="post-meta">Posted on October 26, 2008 by the Campaign</p>
+                        <p>The Rockefeller Guarantee—"If you work hard, America will work for you"—is the foundation of this campaign. It means that your hard work should lead to a good life. It means a federal job guarantee, ensuring that anyone who wants to work, can. It means 4 weeks of paid vacation for every worker. It means your kids can go to community college for free. It means you won't go bankrupt because you get sick. This isn't a radical idea; it's the American Dream, and we're going to restore it.</p>
+                    </div>
+
+                     <div class="blog-post">
+                        <h3>Momentum is Building</h3>
+                        <p class="post-meta">Posted on October 24, 2008 by the Campaign</p>
+                        <p>From the farmlands of Iowa to the factory floors of Ohio, a chorus for change is growing. We are honored to have received the endorsements of the AFL-CIO and the National Nurses United this week. They join a broad coalition of Americans who are tired of trickle-down economics and ready for a government that stands on the side of working families. The energy on the ground is undeniable. Thank you for being a part of it. Let's go win this.</p>
+                    </div>
+                </div>
+
+                <!-- ENDORSEMENTS PAGE -->
+                <div id="endorsements" class="page">
+                    <h2>A Growing Chorus for Change</h2>
+                    <p>John D. Rockefeller V is proud to have earned the support of a broad coalition of Americans who believe it's time for a government that works for all of us.</p>
+                    
+                    <div class="sidebar-widget" style="background-color:#fff; border-color:#ccc; margin-bottom: 20px;">
+                         <div class="widget-content">
+                            <p style="font-style: italic; font-size: 16px;">"John Rockefeller understands that the backbone of this country is the working men and women. His 'Steel Belt Deal' is the most ambitious pro-worker platform we've seen in a generation."</p>
+                            <p style="text-align:right; font-weight:bold; color: #002868;">&mdash; AFL-CIO</p>
+                        </div>
+                    </div>
+                     <div class="sidebar-widget" style="background-color:#fff; border-color:#ccc; margin-bottom: 20px;">
+                        <div class="widget-content">
+                            <p style="font-style: italic; font-size: 16px;">"In these turbulent economic times, America needs a leader with a steady hand and a clear, pragmatic vision. Governor Rockefeller's plan for economic renewal is both bold and achievable."</p>
+                            <p style="text-align:right; font-weight:bold; color: #002868;">&mdash; The New York Times</p>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background-color:#fff; border-color:#ccc; margin-bottom: 20px;">
+                        <div class="widget-content">
+                            <p style="font-style: italic; font-size: 16px;">"John Rockefeller's 'American Health Security Act' is a courageous plan that will finally guarantee healthcare as a right for every single American. We are proud to stand with him."</p>
+                             <p style="text-align:right; font-weight:bold; color: #002868;">&mdash; National Nurses United</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GET INVOLVED / DONATE PAGES -->
+                <div id="get-involved" class="page">
+                    <h2>Join the Movement!</h2>
+                    <p>Change doesn't happen from the top down; it happens from the ground up. Sign up below to join the movement for American Renewal.</p>
+                     <div class="form-container">
+                        <h3>Volunteer Sign-Up</h3>
+                        <div class="form-row"><label for="name">Full Name:</label><input type="text" id="name" name="name"></div>
+                        <div class="form-row"><label for="email">Email:</label><input type="email" id="email" name="email"></div>
+                        <div class="form-row"><label for="zip">Zip Code:</label><input type="text" id="zip" name="zip"></div>
+                        <div class="form-row"><label for="interests">I want to help by:</label><select id="interests" name="interests"><option>Making Phone Calls</option><option>Going Door-to-Door</option><option>Hosting an Event</option><option>Data Entry</option><option>Anything!</option></select></div>
+                        <button class="form-button" onclick="alert('Thank you for signing up! A member of our team will contact you soon.');">Count Me In!</button>
+                    </div>
+                </div>
+                <div id="donate" class="page">
+                     <h2>Power Our Campaign</h2>
+                    <p>This campaign is powered by people, not corporate PACs. Your contribution will help us spread our message. Please give what you can today.</p>
+                    <div class="form-container">
+                        <h3>Contribute to the Campaign</h3>
+                        <p>Select an amount or enter your own:</p>
+                        <div class="donation-levels" style="display:flex; justify-content:center; gap: 10px; margin-bottom:15px;">
+                            <button class="donation-amount form-button" data-amount="25" style="padding:12px 20px; font-size: 16px; background: #eee; color:#333; border-color:#999; text-shadow:none;">$25</button>
+                            <button class="donation-amount form-button" data-amount="50" style="padding:12px 20px; font-size: 16px; background: #eee; color:#333; border-color:#999; text-shadow:none;">$50</button>
+                            <button class="donation-amount form-button" data-amount="100" style="padding:12px 20px; font-size: 16px; background: #eee; color:#333; border-color:#999; text-shadow:none;">$100</button>
+                            <button class="donation-amount form-button" data-amount="250" style="padding:12px 20px; font-size: 16px; background: #eee; color:#333; border-color:#999; text-shadow:none;">$250</button>
+                        </div>
+                        <div class="form-row"><label for="custom-amount">Other Amount:</label><input type="text" id="custom-amount" name="custom-amount" placeholder="$"></div>
+                        <p><em>(This is a demonstration. No payment will be processed.)</em></p>
+                        <button class="form-button" onclick="alert('Thank you for your generous support!');">Donate Now</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="sidebar-column">
+                <div class="sidebar-widget">
+                    <div class="widget-header"><h3>Join the Campaign</h3></div>
+                    <div class="widget-content">
+                        <form onsubmit="alert('Thank you for joining the mailing list!'); return false;">
+                            <p>Get the latest updates from the campaign trail straight to your inbox.</p>
+                            <div class="form-row">
+                                <label for="sidebar-email">Email Address:</label>
+                                <input type="email" id="sidebar-email" placeholder="you@example.com" style="width: 90%;">
+                            </div>
+                            <button class="form-button" style="padding:10px 20px; font-size:16px;">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                 
+                 <div class="sidebar-widget">
+                    <div class="widget-header"><h3>Policy Spotlight</h3></div>
+                    <div class="widget-content">
+                        <h4>National Works Program</h4>
+                        <p>Our plan will create a "Domestic Civilian Corp" to immediately hire 500,000 Americans to rebuild our crumbling infrastructure. This includes projects for high-speed rail, rural broadband, and modernizing our water systems.</p>
+                    </div>
+                 </div>
+                 
+                 <div class="sidebar-widget">
+                    <div class="widget-header"><h3>Upcoming Events</h3></div>
+                     <div class="widget-content">
+                        <div class="events-list">
+                            <div class="event">
+                                <p><span class="date">Oct 29:</span> Town Hall in Columbus, OH</p>
+                            </div>
+                            <div class="event">
+                               <p><span class="date">Oct 31:</span> Rally in Philadelphia, PA</p>
+                            </div>
+                            <div class="event">
+                                <p><span class="date">Nov 02:</span> Get Out the Vote Canvass in Miami, FL</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Paid for by John D. Rockefeller V for President 2008</p>
+            <p>&copy; 2008 John D. Rockefeller V for President | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const accordions = document.querySelectorAll('.accordion-title');
+            const donationButtons = document.querySelectorAll('.donation-amount');
+            const customAmountInput = document.getElementById('custom-amount');
+
+            function showPage(pageId) {
+                pages.forEach(page => page.classList.remove('active'));
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                   targetPage.classList.add('active');
+                } else {
+                    document.getElementById('home').classList.add('active'); 
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === '#' + pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                window.scrollTo(0, 0);
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('href').substring(1);
+                    showPage(pageId);
+                    window.location.hash = pageId;
+                });
+            });
+
+            const currentHash = window.location.hash.substring(1);
+            if (currentHash && document.getElementById(currentHash)) {
+                showPage(currentHash);
+            } else {
+                showPage('home');
+            }
+
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        setTimeout(() => { content.style.maxHeight = content.scrollHeight + "px"; }, 10);
+                    }
+                });
+            });
+            
+            const selectedStyle = "linear-gradient(to bottom, #0040a3 0%, #002868 100%)";
+            const defaultStyle = "linear-gradient(rgb(238, 238, 238), rgb(238, 238, 238))";
+
+            donationButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    donationButtons.forEach(btn => {
+                        btn.style.background = defaultStyle;
+                        btn.style.color = '#333';
+                        btn.style.borderColor = '#999';
+                        btn.style.textShadow = 'none';
+                    });
+                    this.style.background = selectedStyle;
+                    this.style.color = '#fff';
+                    this.style.borderColor = '#001f4f';
+                    this.style.textShadow = '1px 1px 1px #000';
+                    customAmountInput.value = ''; 
+                });
+            });
+            
+            customAmountInput.addEventListener('focus', function() {
+                 donationButtons.forEach(btn => {
+                    btn.style.background = defaultStyle;
+                    btn.style.color = '#333';
+                    btn.style.borderColor = '#999';
+                    btn.style.textShadow = 'none';
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
+
